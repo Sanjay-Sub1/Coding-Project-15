@@ -2,7 +2,7 @@ import { assets } from './asset.js';
 
 function calculatePortfolioValue() {
   return assets.reduce((total, asset) => {
-    return total + (asset.price * asset.quantity);
+    return total + asset.price * asset.quantity;
   }, 0);
 }
 
@@ -11,7 +11,7 @@ function getPortfolioAllocation() {
   
   return assets.map(asset => {
     const assetValue = asset.price * asset.quantity;
-    const allocation = ((assetValue / totalValue) * 100);
+    const allocation = ((assetValue / totalValue) * 100).toFixed(2);
     return {
       id: asset.id,
       name: asset.name,
@@ -20,4 +20,5 @@ function getPortfolioAllocation() {
     };
   });
 }
+
 export { calculatePortfolioValue, getPortfolioAllocation };
