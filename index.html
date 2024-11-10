@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Portfolio Management</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+
+    .box {
+      border: 2px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 8px;
+      background-color: #fff;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #portfolioValue, #updatedPortfolioValue, #transactionDetails, #allocationList, #receiptDetails {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .number {
+      color: green;
+      font-weight: bold;
+    }
+
+    .text {
+      color: black;
+    }
+
+    #allocationList li, #transactionDetails li, #receiptDetails li {
+      padding: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Financial Portfolio Management System</h1>
+
+  <div class="box">
+    <h2 class="text">Initial Portfolio</h2>
+    <p id="portfolioValue"><span class="text">Total Portfolio Value: </span><span class="number"></span></p>
+    <ul id="allocationList"></ul>
+  </div>
+
+  <div class="box">
+    <h2 class="text">Transaction Receipts</h2>
+    <ul id="receiptDetails"><span class="text">Receipts for each transaction will be displayed here.</span></ul>
+  </div>
+
+  <div class="box">
+    <h2 class="text">Updated Portfolio</h2>
+    <p id="updatedPortfolioValue"><span class="text">Updated Portfolio Value: </span><span class="number"></span></p>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
 
